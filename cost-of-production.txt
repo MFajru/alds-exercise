@@ -1,0 +1,18 @@
+cost of production Program
+
+declaration
+var menu : string
+var price : integer
+
+algorithm
+INPUT menu
+
+ingredients = Breakdown the menu
+
+IF ingredients == given_ingredients_list THEN
+    price = Calculate given_ingredients_price
+    OUTPUT price
+ELSE
+    OUTPUT "Failed to calculate"
+
+

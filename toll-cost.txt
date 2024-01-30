@@ -1,0 +1,21 @@
+toll cost Program
+
+declaration
+var car : string
+var balance : int
+var cost : int
+var remain_balance : int
+
+algorithm
+INPUT car
+INPUT balance
+
+IF car not exist IN car_type THEN
+    OUTPUT "Invalid car type entered"
+
+IF balance < cost THEN
+    OUTPUT "Insufficient balance"
+
+IF balance >= cost AND car exist IN car_type THEN
+    remain_balance = balance - cost
+    OUTPUT cost, car, remain_balance

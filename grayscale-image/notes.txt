@@ -1,0 +1,37 @@
+Two ways to assingn value on struct data type
+    
+1.
+    pixel1 := pixels{red: 70, green: 80, blue: 50}
+	pixel2 := pixels{red: 50, green: 40, blue: 20}
+	pixel3 := pixels{red: 90, green: 70, blue: 30}
+	pixel4 := pixels{red: 20, green: 10, blue: 30}
+
+	var average int
+
+	imagePixels := []pixels{pixel1, pixel2, pixel3, pixel4}
+
+	for i, pixel := range imagePixels {
+		average = (pixel.red + pixel.blue + pixel.green) / 3
+		pixel.red = average
+		pixel.blue = average
+		pixel.green = average
+		imagePixels[i] = pixel
+	}
+
+2.
+pixel1 := pixels{red: 70, green: 80, blue: 50}
+	pixel2 := pixels{red: 50, green: 40, blue: 20}
+	pixel3 := pixels{red: 90, green: 70, blue: 30}
+	pixel4 := pixels{red: 20, green: 10, blue: 30}
+
+	var average int
+
+	imagePixels := []*pixels{&pixel1, &pixel2, &pixel3, &pixel4}
+
+	for _, pixel := range imagePixels {
+		average = (pixel.red + pixel.blue + pixel.green) / 3
+		pixel.red = average
+		pixel.blue = average
+		pixel.green = average
+		fmt.Println(*pixel)
+	}

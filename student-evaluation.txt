@@ -1,0 +1,11 @@
+student evaluation Program
+
+declaration:    
+var studentScore : integer
+
+algorithm:
+INPUT studentScore
+IF (studentScore >= 70) THEN
+    OUTPUT "Passed"
+ELSE
+    OUTPUT "Not Passed"
